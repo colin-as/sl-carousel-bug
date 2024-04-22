@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Title</title>
+
+  <script type='module' data-shoelace='https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn' defer>
+    import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/components/carousel/carousel.js'
+    import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/components/carousel-item/carousel-item.js'
+    import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/components/resize-observer/resize-observer.js'
+  </script>
+
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css'>
+
+<style>
+
+
+@media screen and (min-width: 768px) {
+
+
+  sl-carousel::part(navigation-button) {
+    flex: 1;
+    padding: 0;
+    /* transition: visibility .25s; */
+  }
+
+  .content-carousel .nav-btn::part(base) {
+    padding: 7px;
+  }
+  
+  .content-carousel .nav-btn::part(base):hover {
+    background-color: var(--nova-brand-primary);
+    border: 1px solid black;
+  }
+  
+  .nav-btn + .nav-btn {
+    margin-left: 10px;
+  }
+
+  .content-carousel__slide {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .content-carousel .h1 {
+    font: var(--nova-h4-font);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .content-carousel__slide {
+    gap: 80px;
+  }
+
+  /* sl-carousel::part(navigation) {
+    left: calc(var(--navPosition) + 60px);
+    bottom: 60px;
+  } */
+
+  .content-carousel .h1 {
+    font: var(--nova-h3-font);
+  }
+} 
+
+@media screen and (min-width: 1240px) {
+  .content-carousel .h1 {
+    font: var(--nova-h3-font);
+  }
+}
+
+
+@media screen and (min-width: 1480px) {
+  .content-carousel .h1 {
+    font: var(--nova-h1-font);
+  }
+
+  .content-carousel__slide {
+    gap: 120px;
+  }
+}
+
+
+/* .image-with-text {
+  flex-direction: column;
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-bottom: 15px;
+
+}
+
+.image-with-text__media {
+  padding: var(--nova-space-sm);
+  border-radius: 8px;
+  flex: 1;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.image-with-text--full-bleed .image-with-text__media {
+  padding: 0;
+  border-radius: 0;
+}
+
+.image-with-text__image {
+  object-fit: cover;
+  height: calc(100vw * (7 / 6));
+  width: 100%;
+}
+
+.image-with-text__content {
+  padding: var(--nova-space-md);
+  width: 100%;
+  gap: var(--nova-space-lg);
+  font: var(--nova-h6-font);
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-with-text--full-bleed .image-with-text__content {
+  display: block;
+  text-align: left;
+}
+
+.image-with-text__text {
+  gap: var(--nova-space-xs);
+}
+
+.image-with-text sl-button {
+  width: fit-content;
+  margin-top: 15px;
+}
+
+.image-with-text sl-button.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .image-with-text {
+    padding-bottom: 0px;
+  }
+
+  .image-with-text__media {
+    padding: var(--nova-space-xl);
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .image-with-text--full-bleed .image-with-text__media {
+    padding: 0;
+  }
+
+  .image-with-text__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .image-with-text__content {
+    max-width: 50%;
+    gap: var(--nova-space-md);
+    padding: var(--nova-space-lg);
+    text-align: left;
+    align-items: start;;
+  }
+
+  .image-with-text sl-button {
+    font-size: var(--nova-body-font);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .image-with-text {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .image-with-text__content {
+    padding: var(--nova-space-xl);
+  }
+} */
+
+
+</style>
+</head>
+
+<body>
+  <sl-resize-observer>
+  <sl-carousel style="--aspect-ratio: auto; --nav-bottom: 48px;" navigation loop>
+
+    <sl-carousel-item>
+      <div
+        class="image-with-text flex flex-align-center image-with-text--hero_slide_DKgXbH  image-with-text--full-bleed"
+        data-layout="media_left">
+        <div class="image-with-text__media flex flex-justify-center flex-align-center"><img
+            class="image-with-text__image"
+            src="https://picsum.photos/600"
+            alt="New Blueberry Bliss Type 4 Styler" loading="eager"></div>
+        <div class="image-with-text__content flex flex-column flex-justify-center">
+          <div class="image-with-text__text flex flex-column">
+            <h2 class="h1">New Blueberry Bliss Type 4 Styler</h2>Unleash the magic of your coils with NEW styler made
+            just for type 4 hair
+          </div><sl-button variant="primary" href="#" class=" centered " size="medium" data-optional="" data-valid="">
+            Shop Now
+          </sl-button>
+        </div>
+      </div>
+    </sl-carousel-item>
+
+    <sl-carousel-item>
+      <div class="image-with-text flex flex-align-center image-with-text--hero_slide_FwX6FX "
+        data-layout="content_left">
+        <div class="image-with-text__media flex flex-justify-center flex-align-center">
+          <div class="crl-tile">
+            <div class="crl-tile__img-wrapper">
+              <img id="24920116690980" src="https://picsum.photos/600"
+                loading="eager" alt="">
+
+
+            </div>
+          </div>
+        </div>
+        <div class="image-with-text__content flex flex-column flex-justify-center">
+          <div class="image-with-text__text flex flex-column">
+            <h2 class="h1">Text + Image Module 3</h2>testing 3 slides
+          </div>
+        </div>
+      </div>
+    </sl-carousel-item>
+
+    <sl-button variant="secondary" size="small" circle slot="previous-icon" class="nav-btn nav-btn--prev primary-hover">
+      <sl-icon name="chevron-left" label="previous slide"></sl-icon>
+    </sl-button>
+
+    <sl-button variant="secondary" size="small" circle slot="next-icon" class="nav-btn nav-btn--next primary-hover">
+      <sl-icon name="chevron-right" label="next slide"></sl-icon>
+    </sl-button>
+  </sl-carousel>
+</sl-resize-observer>
+</body>
+
+</html>
